@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="address">Type of Spell:</label>
+        <input type="text" name="sp_type" id="sp_type" placeholder="type:" size="25px">
+        <br />
+        <label for="address">Spell's school:</label>
+        <input type="text" name="sp_school" id="sp_school" placeholder="type:" size="25px">
+        <br />
+        <label for="address">Spell's level:</label>
+        <input type="text" name="sp_level" id="sp_level" placeholder="type:" size="25px">
+        <p>Choose the side:</p>
+        <select name="sp_race" id="sp_race">
+                <!--Value - то, что передается в пхп-->
+                <option value="white">White magic</option>
+                <option value="black">Black magic</option>
+        </select>
+        <p>Choose payment:</p>
+        <label><input type="radio" name="payment" value="paypal">Paypal</label>
+        <br />
+        <label><input type="radio" name="payment" value="visa">Visa</label>
+        <br />
+        <textarea rows="4" cols="50" name="comments" id="comments"></textarea>
+        <br />
+        <label><input type="checkbox" name="em_updates" checked="checked">Я хочу получать на почту новые спеллы</label>
+        <label><input type="checkbox" name=save_payment>Сохранить способ оплаты</label>
+        <br />
+        <input type="submit" value="create">
+    </form>
+</body>
+</html>
