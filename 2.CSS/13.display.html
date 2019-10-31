@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        .white_magic {
+            color: whitesmoke;
+            background-color: black;
+            height: 100px;
+            width: auto;
+            /* visibility: hidden; /* див невидимый, поп прежнему занимает столько же места */
+            /* display: none; уберает див полностью, занимает 0 места, удален */
+        }
+        .black_magic {
+            height: 100px;
+            background-color: thistle;
+            color: #010101;
+        }
+        .violet_magic {
+            height: 100px;
+            background-color: #9400d3;
+            color: rgb(252,240,250);
+        }
+        .spn_magic {
+            font-weight: bolder;
+            font-size: 104%;
+            display: block; /* инлайн отображается как блочный элемент
+            (он все еще инлайн, внутни нельзя ничо размещать, просто такое отображение) */
+        }
+    </style>
+</head>
+<body>
+    <!--span - inlaign элемент, для группировки инлайнов и их стилизации-->
+    <div class="white_magic">
+        <p><span class="spn_magic">while</span> magic</p>
+    </div>
+    <div class="black_magic">
+        <p><span class="spn_magic">black</span> magic</p>
+    </div>
+    <div class="violet_magic">
+        <p><span class="spn_magic">violet</span> magic</p>
+    </div>
+</body>
+</html>

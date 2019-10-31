@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>transition</title>
+    <style>
+        .white_magic {
+            color: whitesmoke;
+            background-color: black;
+            height: 100px;
+            width: 120px;
+            transition: width 1s;
+        }
+        .white_magic:hover {
+            width: 300px;
+        }
+        .black_magic {
+            height: 100px;
+            background-color: thistle;
+            color: #010101;
+        }
+        .violet_magic {
+            height: 100px;
+            width: 100px;
+            background-color: #9400d3;
+            color: rgb(252,240,250);
+            transition: width 1s, height 1s, transform 1s;
+        }
+        .violet_magic:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotateX(180deg);
+        }
+        .spn_magic {
+            font-weight: bolder;
+            font-size: 104%;
+        }
+    </style>
+</head>
+<body>
+    <!--span - inlaign элемент, для группировки инлайнов и их стилизации-->
+    <div class="white_magic">
+        <p><span class="spn_magic">while</span> magic</p>
+    </div>
+    <div class="black_magic">
+        <p><span class="spn_magic">black</span> magic</p>
+    </div>
+    <div class="violet_magic">
+        <p><span class="spn_magic">violet</span> magic</p>
+    </div>
+</body>
+</html>

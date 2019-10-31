@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning</title>
+    <style>
+        .white_magic {
+            color: whitesmoke;
+            background-color: black;
+            height: 100px;
+            width: auto;
+            position: fixed; /*все элементы на странице при расположении будут игнорировать его*/
+            top: 40px; /* from top of the page */
+            left: 20px;
+            z-index: 3;
+        }
+        .black_magic {
+            height: 100px;
+            background-color: thistle;
+            color: #010101;
+            position: relative;
+            left: 50px; /* позиция относительно origin(родителя), в отличии от фиксированной никто никого не игнорт) */
+            z-index: 2;
+        }
+        .violet_magic {
+            height: 100px;
+            background-color: #9400d3;
+            color: rgb(252,240,250);
+            position: absolute; /* относительно не статик родителя || страницы если нет*/
+            top: 50px;
+            left: 110px;
+            z-index: 2;
+        }
+        .spn_magic {
+            font-weight: bolder;
+            font-size: 104%;
+        }
+    </style>
+</head>
+<body>
+    <!--Флоат элементы плавают только горизонтально к имеющимся элементам-->
+    <div class="white_magic">
+        <p><span class="spn_magic">while</span> magic</p>
+    </div>
+    <div class="black_magic">
+        <p><span class="spn_magic">black</span> magic</p>
+    </div>
+    <div class="violet_magic">
+        <p><span class="spn_magic">violet</span> magic</p>
+    </div>
+</body>
+</html>

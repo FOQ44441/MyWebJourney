@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Styling list</title>
+    <style>
+        ul.ul_one {
+            /* list-style-type: square; */
+            /* list-style: lower-roman; */
+            list-style-image: url(images/уменьше.jpg);
+        }
+        ul.ul_two {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        ul.ul_two li {
+            background-image: url(images/уменьше.jpg);
+            background-repeat: no-repeat;
+            background-position: 0px center;
+            padding-left: 35px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="ul_one">
+        <li>Меню</li>
+        <li>Инвентарь</li>
+        <li>Умения
+            <ul>
+                <li>активные</li>
+                <li>пассивные</li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="ul_two">
+        <li>Меню</li>
+        <li>Инвентарь</li>
+        <li>Умения
+            <ul>
+                <li>активные</li>
+                <li>пассивные</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

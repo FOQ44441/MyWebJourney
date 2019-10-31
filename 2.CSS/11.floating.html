@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Floating</title>
+    <style>
+        .white_magic {
+            color: whitesmoke;
+            background-color: black;
+            height: 100px;
+            width: auto;
+            float: left;
+        }
+        .black_magic {
+            height: 100px;
+            background-color: thistle;
+            color: #010101;
+            float: right;
+        }
+        .violet_magic {
+            height: 100px;
+            background-color: #9400d3;
+            color: rgb(252,240,250);
+            /* Clear - означает что-то типа <br> в html, если див помещается сверху между другими, 
+            то он все равно выбьет себе новый рядок, фулл место */
+            clear: both;
+        }
+        .spn_magic {
+            font-weight: bolder;
+            font-size: 104%;
+        }
+    </style>
+</head>
+<body>
+    <!--Флоат элементы плавают только горизонтально к имеющимся элементам-->
+    <div class="white_magic">
+        <p><span class="spn_magic">while</span> magic</p>
+    </div>
+    <div class="black_magic">
+        <p><span class="spn_magic">black</span> magic</p>
+    </div>
+    <div class="violet_magic">
+        <p><span class="spn_magic">violet</span> magic</p>
+    </div>
+</body>
+</html>

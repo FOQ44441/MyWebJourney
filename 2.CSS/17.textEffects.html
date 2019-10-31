@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Text effects</title>
+    <style>
+        .white_magic {
+            color: whitesmoke;
+            background-color: black;
+            height: 100px;
+            width: auto;
+            overflow: hidden; /*не вылазит за див*/
+            white-space: nowrap; /*текст только в одной сторчке, без автопереноса*/
+            text-overflow: ellipsis; /*троеточие вконце*/
+        }
+        .white_magic:hover {
+            overflow: visible;
+            white-space: inherit;
+            overflow: hidden;
+        }
+        .black_magic {
+            height: 100px;
+            width: 640px;
+            background-color: thistle;
+            color: #010101;
+            /* word-break: break-all; */
+            /* word-break: keep-all; */
+            word-wrap: break-word; /*если длинное слово не помещается в див - разбить его*/
+            overflow: hidden;
+        }
+        .violet_magic {
+            height: 100px;
+            background-color: #9400d3;
+            color: rgb(252,240,250);
+        }
+        .spn_magic {
+            font-weight: bolder;
+            font-size: 104%;
+        }
+    </style>
+</head>
+<body>
+    <!--span - inlaign элемент, для группировки инлайнов и их стилизации-->
+    <div class="white_magic">
+        White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic 
+        White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic 
+        White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic 
+        White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic White Magic
+
+    </div>
+    <div class="black_magic">
+        <p>black magic black magic black magic black magic black magic black magic black magic black magic black magic black magic black magic
+                black magic black magic black magic
+                black magic black magic black magic black magic black magic black magic black magic
+                maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaagic!
+                black magic black magic black magic black magic black magic black magic black magic black magic black magic black magic black magic
+                black magic black magic black magic
+                black magic black magic black magic black magic black magic black magic black magic
+        </p>
+    </div>
+    <div class="violet_magic">
+        <p><span class="spn_magic">violet</span> magic</p>
+    </div>
+</body>
+</html>

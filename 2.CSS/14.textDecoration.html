@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Text Decor</title>
+    <style>
+        .white_magic {
+            color: whitesmoke;
+            background-color: black;
+            height: 100px;
+            width: auto;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .black_magic {
+            height: 100px;
+            background-color: thistle;
+            color: #010101;
+            text-decoration: overline;
+            font-style: italic;
+            font-size: 1.5em; /* 1em == 16px */
+        }
+        .violet_magic {
+            height: 100px;
+            background-color: #9400d3;
+            color: rgb(252,240,250);
+            letter-spacing: 10px;
+            text-shadow: -3px 3px 3px white; /*горинзнтальная тень, вертикальная, радиус размытия*/
+            text-indent: 40px;
+        }
+        .spn_magic {
+            font-weight: bolder;
+            font-size: 104%;
+        }
+    </style>
+</head>
+<body>
+    <!--span - inlaign элемент, для группировки инлайнов и их стилизации-->
+    <div class="white_magic">
+        <p><span class="spn_magic">while</span> magic</p>
+    </div>
+    <div class="black_magic">
+        <p><span class="spn_magic">black</span> magic</p>
+    </div>
+    <div class="violet_magic">
+        <p><span class="spn_magic">violet</span> magic</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>styling links</title>
+    <style>
+        a:link {
+            color: red;
+        }
+        a:hover {
+            font-size: 1.5em;
+        }
+        /* когда нажали на ссылку */
+        div.white_magic a:active {
+            font-size: 2em;
+        }
+        .white_magic {
+            color: whitesmoke;
+            background-color: black;
+            height: 100px;
+            width: auto;
+        }
+        div.black_magic a:visited {
+            color: black;
+            font-size: 4em; /*не работает*/
+        }
+        .black_magic {
+            height: 100px;
+            background-color: thistle;
+            color: #010101;
+        }
+        .violet_magic {
+            height: 100px;
+            background-color: #9400d3;
+            color: rgb(252,240,250);
+        }
+        .spn_magic {
+            font-weight: bolder;
+            font-size: 104%;
+        }
+    </style>
+</head>
+<body>
+    <!--span - inlaign элемент, для группировки инлайнов и их стилизации-->
+    <div class="white_magic">
+        <p>while magic</p>
+        <p><a href="https://www.amazon.com">Visit this link</a></p>
+    </div>
+    <div class="black_magic">
+        <p>black magic</p>
+        <p><a href="https://www.google.com">Visit this link</a></p>
+
+    </div>
+    <div class="violet_magic">
+        <p>violet magic</p>
+        <p><a href="https://www.youtube.com">Visit this link</a></p>
+
+    </div>
+</body>
+</html>

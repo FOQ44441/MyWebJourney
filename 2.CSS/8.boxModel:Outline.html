@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Border</title>
+    <!--padding: top, right buttom, left OR top, botton and left, right
+    ridge должно быть первым! Либо в другом классе
+    outline - дл того чтобы элементы выделялись, stand out-->
+    <style>
+        .white_magic {
+            color: whitesmoke;
+            background-color: black;
+            height: auto;
+            width: auto;
+            padding: 16px;
+            border: 12px gold ridge;
+            outline-style: solid;
+            outline-color: indianred;
+            outline-width: thick;
+        }
+        .black_magic {
+            height: auto;
+            background-color: thistle;
+            color: #010101;
+            padding: 10px 6px 4px 10px;
+            border:ridge;
+            border-width: 10px 15px 5px 20px;
+            border-color: gold goldenrod;
+        }
+        .violet_magic {
+            height: 100px;
+            width: 100px;
+            background-color: #9400d3;
+            color: rgb(252,240,250);
+            padding: 10px 10px;
+            border: ridge;
+            border-width: 20px 20px;
+            border-color: green greenyellow goldenrod ghostwhite;
+            border-radius: 100px;
+        }
+        .spn_magic {
+            font-weight: bolder;
+            font-size: 104%;
+        }
+        p {
+            margin: 10px;
+            background-color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <!--span - inlaign элемент, для группировки инлайнов и их стилизации-->
+    <div class="white_magic">
+        <p>white magic</p>
+    </div>
+    <div class="black_magic">
+        <p>black magic</p>
+    </div>
+    <div class="violet_magic">
+        <p>violet magic</p>
+    </div>
+</body>
+</html>
