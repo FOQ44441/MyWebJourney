@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlexBox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #07575B;
+            height: 200px;
+            margin: 10px;
+            display: flex;
+            /* flex-wrap: wrap; обрезание по контенту внутри дива, будут одинаковые по горизонтали*/
+            flex-direction: row;
+            align-content: flex-start;
+            /* align-content: center; */
+        }
+        /*Стилизует все дивы внутри контейнера*/
+        .container > div {
+            background-color: #66a5AD;
+            color: aliceblue;
+            text-align: center;
+            padding: 20px;
+            margin: 1px;
+            border: 3px #C4DFE6 solid;
+            
+            
+            flex-basis: 200px; /*минимальная ширина дива, если меньше - не маньше а перенос на новую строку*/
+            flex-shrink: 1;
+            flex: 1 1 150px; /*grow, shrink, basis*/
+        }
+        #Apple {
+            /*flex-grow: 2; */ /*будет увеличеваться в два раза больше*/
+            flex-shrink: 2; /*будет уменьшаться вдрое больше остальных, 0 - no shrink*/
+            /*если ф.гроу 1 а у остальных элементов нету/0, то этот див займет ВСЕ свободное пространство*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="Apple">Apple</div>
+        <div id="Facebook">Facebook</div>
+        <div id="Microsoft">Microsoft</div>
+        <div id="Samsung">Samsung</div>
+        <div id="Google">Google</div>
+        <div id="Amazon">Amazon</div>
+    </div>
+</body>
+</html>
