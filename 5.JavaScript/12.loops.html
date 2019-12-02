@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>objects with new</title>
+</head> 
+<body>
+	<p id="prg1">GJOG</p>
+	<script>
+		class Product {
+			constructor(name = "undef", price = 0) {
+				this.name = name;
+				this.price = price;
+			}
+		}
+		// var	Product = function(name = "undef", price = 0){
+		// 	this.name = name;
+		// 	this.price = price;
+		// }
+		class User {
+			constructor(money = 0) {
+				this.money = money;
+				this.goods = new Array();
+			}
+			buy(product) {
+				this.money -= product.price;
+				this.goods.push(product.name);
+			}
+		}
+		// var	User = function(money) {
+		// 	this.money = money;
+		// 	this.goods = new Array();
+		// 	this.buy = function(product) {
+		// 		this.money -=product.price;
+		// 		// if (this.money <= 0)
+		// 		// 	alert("HAVE NO MONEY");
+		// 			this.goods.push(product.name);
+		// 	}
+		// }
+		var phone = new Product("iphone 5", 200);
+		var pen = new Product("Pen 5", 2);
+		var	laptop = new Product("lenovo v5", 120);
+
+		var andrey = new User(1000);
+		var products = [phone, pen, laptop];
+		function mainLoon(user) {
+			while (user.money > 0)
+			{
+				//console.log(Math.round(user.buy(Math.random() * 2)));
+				user.buy(products[Math.round(Math.random() * 2)]);
+			}
+		}
+		mainLoon(andrey);
+		console.log(andrey.goods.toString());
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Function</title>
+	<style>
+		.white_magic {
+			color: whitesmoke;
+			background-color: black;
+			height: 100px;
+			width: auto;
+		}
+		.black_magic {
+			height: 100px;
+			background-color: thistle;
+			color: #010101;
+		}
+		.violet_magic {
+			height: 100px;
+			background-color: #9400d3;
+			color: rgb(252,240,250);
+		}
+		.spn_magic {
+			font-weight: bolder;
+			font-size: 104%;
+		}
+	</style>
+</head>
+<body>
+	<!--span - inlaign элемент, для группировки инлайнов и их стилизации-->
+	<div id="white_magic" class="white_magic">
+		<p><span class="spn_magic">while</span> magic</p>
+	</div>
+	<div id="black_magic" class="black_magic">
+		<p><span class="spn_magic">black</span> magic</p>
+	</div>
+	<div id="violet_magic" class="violet_magic">
+		<p><span class="spn_magic">violet</span> magic</p>
+	</div>
+	<button id="button1" onclick="swapContent('white_magic', 'violet_magic')">swap content</button>
+	<button id="button2">swap content</button>
+
+	<script>
+		function swapContent(id1, id2) {
+            var content1 = document.getElementById(id1).innerHTML;
+            var content2 = document.getElementById(id2).innerHTML;
+            document.getElementById(id1).innerHTML = content2;
+            document.getElementById(id2).innerHTML = content1;
+        }
+        // document.getElementById('button1').onclick = swapContent('white_magic', 'violet_magic');
+        // document.getElementById('button2').onclick = swapContent('white_magic', 'violet_magic');
+	</script>
+</body>
+</html>

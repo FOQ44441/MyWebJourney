@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>objects with new</title>
+</head> 
+<body>
+	<p id="prg1">GJOG</p>
+	<script>
+		var someNumbers = [1, 2, 3, 4];
+		var arr = new Array("Hello", "wrld");
+		document.getElementById("prg1").innerHTML +="</br>" + someNumbers;
+		document.getElementById("prg1").innerHTML += arr;
+		someNumbers.splice(2, 1); // какой удалить и сколько
+		console.log(someNumbers);
+		someNumbers.splice(1, 0, 4, 4, 4);
+		console.log(someNumbers);
+		someNumbers.sort();
+		console.log(someNumbers);
+		someNumbers.reverse();
+		console.log(someNumbers);
+		var newArr = "ABCD".split('', 3); //3шт
+		console.log(newArr);
+	</script>
+</body>
+</html>

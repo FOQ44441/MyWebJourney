@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Counter</title>
+</head>
+<body>
+	<p id="counter">0</p>
+	<button onclick="clearInterval(myCounter)">Stop</button>
+	<button onclick="clearTimeout(delayedWellcomeMessage)">Aviod Welcome</button>
+	<script>
+		var counter = document.getElementById("counter");
+		var count = 0;
+		var myCounter = setInterval(function(){count++; counter.innerHTML = count;}, 1000);
+
+		var delayedWellcomeMessage = setTimeout(function(){window.alert("Welcome!")}, 3000);
+	</script>
+</body>
+</html>

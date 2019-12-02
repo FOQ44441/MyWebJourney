@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Regex</title>
+</head>
+<body>
+	<p>Type a right password</p>
+	<p>Enter Password:<br /> <input id ="pass" type="password"> </p>
+	<p>Re-enter Password:<br /> <input id ="pass2" type="password"> </p>
+	<p id="error"></p>
+	<button onclick="check()">Submit</button>
+	<script>
+		try {
+			sum(3, 4);
+		} catch(err) {
+			console.log(err.message);
+		}
+		function check() {
+			var pass = document.getElementById("pass").value;
+			var pass2 = document.getElementById("pass2").value;
+			var errMesage = document.getElementById("error");
+			var throwError = "";
+			try {
+				if (pass.length < 6) {
+					throwError += "<br /> Password to short";
+				}
+				if (/[A-Z]/g.test(pass) == false) {
+					throwError += "<br /> Password is not correct. Add one capital letter";
+				}
+				if (/\d/g.test(pass) == false) {
+					throwError += "<br /> Password is not correct. Add one letter";
+				}
+				if (pass != pass2) {
+					throwError += "<br /> Password should match";
+				}
+				throw (throwError);
+
+			} catch (err) {
+				errMesage.innerHTML = err;
+			}
+		}
+	</script>
+</body>
+</html>

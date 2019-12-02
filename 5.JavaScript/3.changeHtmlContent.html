@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Change html</title>
+	<style>
+		.white_magic {
+			color: whitesmoke;
+			background-color: black;
+			height: 100px;
+			width: auto;
+		}
+		.black_magic {
+			height: 100px;
+			background-color: thistle;
+			color: #010101;
+		}
+		.violet_magic {
+			height: 100px;
+			background-color: #9400d3;
+			color: rgb(252,240,250);
+		}
+		.spn_magic {
+			font-weight: bolder;
+			font-size: 104%;
+		}
+	</style>
+</head>
+<body>
+	<!--span - inlaign элемент, для группировки инлайнов и их стилизации-->
+	<div id="white_magic" class="white_magic">
+		<p><span class="spn_magic">while</span> magic</p>
+	</div>
+	<div id="black_magic" class="black_magic">
+		<p><span class="spn_magic">black</span> magic</p>
+	</div>
+	<div id="violet_magic" class="violet_magic">
+		<p><span class="spn_magic">violet</span> magic</p>
+	</div>
+	<button id="button1">Change white magic</button>
+	<button id="button2">Change black magic</button>
+
+	<script>
+		document.getElementById("button1").onclick = function() {
+		document.getElementById("white_magic").innerHTML = "<p>WHIE_MAGIC</p>";
+		}
+		document.getElementById("button2").ondblclick = function() {
+		document.getElementById("black_magic").innerHTML = "<p><strong>BLACK IS BACK!</strong><ul><li>one</li><li>two</li></ul></p>"
+		}
+	</script>
+</body>
+</html>

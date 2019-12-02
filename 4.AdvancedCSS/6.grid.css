@@ -1,0 +1,18 @@
+.container {
+    background-color: blue;
+    display: grid;
+    /* row height */
+    grid-template-rows: 30px 30px 30px 30px;
+    /* columns width */
+    grid-template-columns: repeat(4, minmax(300px, 1fr)); /* если не выходит дать всем 300px, то тогда по 1fr пикселей */
+    /* если мин поставить 400 то оверфлов будет, нужно: !!repeat(auto-fill, minmax... тогда будет 3 колонки,
+       с 300рх будет как и прежде 4. Если auto-fit то заполнится максимум */
+    grid-gap: 5px;
+    padding: 7px;
+    /*  set the height of any extra rows outside the temolate(implicit grid) */
+    grid-auto-rows: 100px; /*размер новых рядков*/
+    grid-auto-flow: row; /* rpw - defolt, column - весь оверфлов контент будет на внизу а запределами, слева */
+    grid-auto-columns: 200px; /* все, и оферфлоу элементы удут 200рх */
+    /* ----------------------------------------------------------------------- */
+
+}
